@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>Welcome to Index</h1>
 
-  </body>
-</html>
+{% extends "basicapp/base.html" %}
+
+{% load my_templates %}
+
+  {% block body_block %}
+  <h1>WELCOME TO INDEX</h1>
+  <h2>This is the index.</h2>
+
+  <h1>{{ text|cut:'world' }}</h1>
+  <h1>{{ number|add:"99" }}</h1>
+
+
+  {% endblock %}
